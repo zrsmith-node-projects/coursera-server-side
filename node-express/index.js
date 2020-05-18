@@ -10,13 +10,7 @@ app.use((req, res, next) => {
   console.log(req.headers);
   res.statusCode = 200;
   res.setHeader("Context-Type", "text/html");
-  res.end(
-    <html>
-      <bdoy>
-        <h1>This is an express server</h1>
-      </bdoy>
-    </html>
-  );
+  res.end("<html><body><h1>This is an express server</h1></body></html>");
 });
 
 const server = http.createServer(app);
